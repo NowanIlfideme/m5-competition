@@ -1,13 +1,23 @@
 # M5 Modelling
 
-## Installation (Python)
+## Setup
 
-Create a conda environment called `m5-comp`:
+1. Create a conda environment called `m5-comp`:
 
-`conda env create`
+    `conda env create`
 
-Then, install the library in editable mode:
+2. Then, install the library in editable mode:
 
-`pip install -e .`
+    `pip install -e .`
 
-This should be enough to get started.
+3. Set up your Kaggle API credentials, as outlined [here](https://github.com/Kaggle/kaggle-api#api-credentials).
+
+4. Download and unzip the data:
+
+    ```bash
+    kaggle competitions download -c m5-forecasting-accuracy -p data
+
+    unzip data/m5-forecasting-accuracy.zip -d data
+    ```
+
+5. Run jupyter.
