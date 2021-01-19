@@ -2,7 +2,7 @@ from m5 import __data__
 
 import pandas as pd
 
-calendar = pd.read_csv(__data__ / "calendar.csv")
+calendar = pd.read_csv(__data__ / "calendar.csv", parse_dates=["date"])
 sell_prices = pd.read_csv(__data__ / "sell_prices.csv")
 sales_train_eval = pd.read_csv(__data__ / "sales_train_evaluation.csv")
 sales_train_valid = pd.read_csv(__data__ / "sales_train_validation.csv")
