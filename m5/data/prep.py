@@ -26,7 +26,7 @@ def get_ds_prices(
         pd.merge(sell_prices, calendar[["date", "wm_yr_wk"]], on="wm_yr_wk")[
             ["store_id", "item_id", "date", "sell_price"]
         ]
-        .rename({"sell_price": "price"})
+        .rename(columns={"sell_price": "price"})
         .set_index(["item_id", "store_id", "date"])
     )
     ds_prices = df_prices.to_xarray()
