@@ -1,0 +1,49 @@
+name: m5-comp
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  # kaggle API
+  - kaggle
+  # numeric core
+  - numpy
+  - scipy
+  - pandas
+  - xarray
+  - bottleneck
+  # PyMC3 and friends
+  - pymc3
+  ##- theano-pymc
+  - arviz
+  - mkl-service
+  - libpython 
+  - m2w64-toolchain
+  # stats/ml
+  - scikit-learn
+  - statsmodels
+  # plotting
+  - matplotlib
+  - seaborn
+  - python-graphviz
+  - graphviz
+  - networkx
+  # jupyter-related
+  - jupyter
+  - notebook
+  - ipywidgets
+  - nbconvert
+  - jupyter_contrib_nbextensions
+  # code tools
+  - flake8
+  - black
+  - isort
+  - pre-commit
+  - bump2version
+  # utility
+  - tqdm
+  - pydantic
+  - orjson
+  # netcdf
+  - h5netcdf=0.8.0
+  - h5py=2.10  # 3+ is currently broken
