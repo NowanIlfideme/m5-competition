@@ -42,6 +42,7 @@ dependencies:
   - tqdm
   - pydantic
   - orjson
+  - fastparquet
   # netcdf
   - h5netcdf=0.8.0
-  - h5py=2.10  # 3+ is currently broken
+  - h5py=2.10 # 3+ is currently broken
