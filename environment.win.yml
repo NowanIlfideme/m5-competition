@@ -2,7 +2,7 @@ name: m5-comp
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
+  - python=3.9
   - pip
   # kaggle API
   - kaggle
@@ -17,7 +17,7 @@ dependencies:
   ##- theano-pymc
   - arviz
   - mkl-service
-  - libpython 
+  - libpython
   - m2w64-toolchain
   # stats/ml
   - scikit-learn
@@ -46,4 +46,8 @@ dependencies:
   - orjson
   # netcdf
   - h5netcdf=0.8.0
-  - h5py=2.10  # 3+ is currently broken
+  - h5py=2.10 # 3+ is currently broken
+  - pip:
+      - -e .
+      # FIXME: Also requires lightgbm
+      # FIXME: Also requires nd_learn package for example, but it's not available to the public!
