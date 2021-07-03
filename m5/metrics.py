@@ -157,9 +157,6 @@ def wrmsse_per_level(
         return list(set(x.dims).difference(["date"]))
 
     for lname, ldef in levels.items():
-        gb = xr.DataArray("")
-        for l in ldef:
-            gb = gb + train[l] + "|"
         if ldef is None:
             train_group, valid_group, weights_group = train, valid, weights
         elif len(ldef) == 0:
@@ -167,6 +164,9 @@ def wrmsse_per_level(
             weights_group = weights.sum(_d(weights))
             valid_group = valid[[target, t_hat]].sum(_d(valid[[target]]))
         else:
+            gb = xr.DataArray("")
+            for l in ldef:
+                gb = gb + train[l] + "|"
             train_group = train[[target]].groupby(gb).sum()
             weights_group = weights.groupby(gb).sum()
             valid_group = valid[[target, t_hat]].groupby(gb).sum()
