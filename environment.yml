@@ -48,5 +48,5 @@ dependencies:
   - h5py=2.10 # 3+ is currently broken
   - pip:
       - -e .
-      # FIXME: Also requires lightgbm
+      # FIXME: Also requires lightgbm, shap
       # FIXME: Also requires nd_learn package for example, but it's not available to the public!
