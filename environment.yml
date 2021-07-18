@@ -50,4 +50,5 @@ dependencies:
       - -e .
       - lightgbm
       - shap
+      - xlrd
       # FIXME: Also requires nd_learn package for example, but it's not available to the public!
