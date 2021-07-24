@@ -32,3 +32,23 @@ rather than just focusing on accuracy.
     ```
 
 5. Run jupyter.
+
+## Runnin in Julia
+
+1. Install Julia.
+
+2. Activate the conda env, then run the following to install the required Julia packages:
+
+    ```julia
+    ]activate .
+    instantiate
+    ```
+
+    Backspace to exit package mode, then install the IJulia (Jupyter) kernel:
+
+    ```julia
+    using IJulia
+    installkernel("julia4threads", env=Dict("JULIA_NUM_THREADS"=>"4", "JULIA_PROJECT"=>pwd()))
+    ```
+
+3. Run `jupyter notebook` and select the kernel you want (either default or 4-thread kernel).
