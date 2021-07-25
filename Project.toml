@@ -1,5 +1,6 @@
 [deps]
 AdvancedVI = "b5ca4192-6429-45e5-a2d9-87aec30a685c"
+Arrow = "69666777-d1a9-59fb-9406-91d4454c9d45"
 Bijectors = "76274a88-744f-5084-9051-94815aaf08c4"
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
 CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
