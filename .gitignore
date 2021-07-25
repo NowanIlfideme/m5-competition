@@ -2,6 +2,9 @@
 /data
 /output
 
+# Julia manifest (different on machines)
+Manifest.toml
+
 # Python cache files
 **/*.ipynb_checkpoints
 **/*.pyc
